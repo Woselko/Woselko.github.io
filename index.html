@@ -4,28 +4,186 @@
 <head>
     <meta charset="utf-8" />
     <meta name="description" content="Hello world!" />
-    <meta name="keywords" content="Hello world!, my first html page, programming, css, html " />
-    <title>Hello world!</title>
+    <meta name="keywords" content="Wosełko, Curriculum Vitae, CV, programming, programmer " />
+    <title>Wosełko - CV</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="stylesheet" href="css/fontello.css" type="text/css" />
     <meta name="author" content="Woselko" />
     <style>
         body {
             background-color: #303030;
             font-family: Verdana;
-            font-size: 40px;
-            color: hotpink;
+
         }
 
         h4 {
             text-align: center;
+            font-family: Lato;
+            font-size: 40px;
+            color: white;
+            margin-top: 70px;
+        }
+
+        #container {
+            background-color: white;
+            width: 794px;
+            height: 1123px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #zdjecie {
+            float: left;
+            background-color: #606060;
+            height: 250px;
+            width: 250px;
+            border-right: dotted 2px #808080
+        }
+
+        #imienazwisko {
+            float: left;
+            background-color: #606060;
+            height: 250px;
+            width: 542px;
+        }
+
+        #panel {
+            float: left;
+            background-color: #909090;
+            height: 873px;
+            width: 251px;
+        }
+        .lewypanel{
+            color:white;
+            font-size: 20px;
+            margin-left: 10px;
+            font-weight:500;
+        }
+        .prawypanel {
+            color: black;
+            font-size: 20px;
+            margin-left: 15px;
+            font-style: normal;
+            width: 543px;
+        }
+        #dane {
+            float: left;
+            height: 873px;
+            width: 543px;
+            background-color: whitesmoke;
+        }
+        .info {
+ 
+            color: black;
+
+        }
+        .oMNIE {
+            color: black;
+            width: 520px;
+            font-size: 16px;
+            line-height: 150%;
+        }
+        .linia {
+            border-bottom: dotted 2px #808080;
+            width: 500px;
+
         }
     </style>
 
 </head>
 <body>
-    <h4>Hello World!</h4>
+    <div id="container">
+        <div id="zdjecie">
+            <img src="img\baby.jfif" height="200"width="200"style="margin-top:25px;margin-left:25px;"/>
+        </div>
+        <div id="imienazwisko">
+            <h4>WOSEŁKO - CURRICULUM VITAE</h4>
+        </div>
+        <div style="clear:both;"> </div>
+        <div id="panel">
+            <br />
+            <i class="lewypanel">
+                <i class="icon-phone" style="font-size:28px;"></i>
+                +48 999888777
+            </i><br /><br /><br /><br />
+            <i class="lewypanel">
+                <i class="icon-mail" style="font-size:28px;"></i>
+                woselko@wos.com
+            </i><br /><br /><br /><br />
+            <i class="lewypanel">
+                <i class="icon-birthday" style="font-size:28px;"></i>
+                18.01.1997
+            </i><br /><br /><br /><br />
+            <i class="lewypanel">
+                <i class="icon-home" style="font-size:28px;"></i>
+                Kraków
+            </i><br /><br />
+        </div>
+        <div id="dane">
+            <br />
+            <div class="prawypanel">
+                <i class="icon-user" style="font-size:28px;"></i>
+                Podsumowanie
+                <div class="linia"></div>
+                <div class="oMNIE">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent convallis nunc ac massa euismod iaculis. Sed ac risus nec augue dictum lacinia.
+                    Donec ultricies porta mi ac blandit. Maecenas maximus cursus volutpat. In ultrices nibh vel risus fringilla, vitae iaculis mauris pellentesque.
+
+                </div>
+            </div>
+            <br />
+            <div class="prawypanel">
+                <i class="icon-shopping-bag" style="font-size:28px;"></i>
+                Doświadczenie
+                <div class="linia"></div>
+                <div class="oMNIE">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent convallis nunc ac massa euismod iaculis. Sed ac risus nec augue dictum lacinia.
+                    Donec ultricies porta mi ac blandit. Maecenas maximus cursus volutpat. In ultrices nibh vel risus fringilla, vitae iaculis mauris pellentesque.
+
+                </div>
+            </div>
+            <br />
+            <div class="prawypanel">
+                <i class="icon-graduation-cap" style="font-size:28px;"></i>
+                Wykształcenie
+                <div class="linia"></div>
+                <div class="oMNIE">
+                    <i style="font-weight:500;">2019 - obecnie</i><br />
+
+                    Akademia Górniczo-Hutnicza<br />
+                    Kierunek Informatyka i Ekonometria
+
+
+
+                </div>
+            </div>
+            <br />
+            <div class="prawypanel">
+                <i class="icon-laptop" style="font-size:28px;"></i>
+                Umiejętności i certyfikaty
+                <div class="linia"></div>
+                <div class="oMNIE">
+                    - OCFA Java Foundations 1Z0-811<br />
+                    - PRINCE2® Foundation Certificate in Project Management  <br />
+                    - Certified Entry-Level Python Programmer[PCEP-30-01] <br />
+                    - Prawo jazdy kat. B <br />
+                    - Język angielski C1 <br />
+                </div>
+            </div>
+            <br /> <br /> <br /> <br /> <br /><br /> <br />
+            <div class="prawypanel">
+                <div class="linia"></div>
+                <div class="oMNIE" style="font-size:12px;">
+                    Wyrażam zgodę na przetwarzanie moich danych osobowych przez XXXXXXXX-XXXXX w celu prowadzenia rekrutacji na aplikowane przeze mnie stanowisko.
+                </div>
+                <div class="linia"></div>
+            </div>
+        </div>
+        <div style="clear:both;"> </div>
+
+    </div>
 
 
 </body>
