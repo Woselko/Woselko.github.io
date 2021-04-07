@@ -1,0 +1,249 @@
+﻿html, body {
+	padding: 0;
+	margin: 0;
+	height: 100%;
+	font-family: arial, sans-serif;
+}
+
+body { 
+	display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+a {
+    text-decoration:none;
+}
+#header {
+    text-align: right;
+    height: 60px;
+    display: flex;
+    margin-top: 18px;
+    margin-right: 10px;
+    justify-content: flex-end;
+}
+.gmail {
+    float: left;
+    color: black;
+    padding: 6px;
+    display: inline-block;
+    text-align: right;
+    display: flex;
+    font-size: 13px;
+}
+.link1 {
+    text-decoration: none;
+    color: rgba(0,0,0,0.87);
+    display: flex;
+}
+    .link1:hover {
+        text-decoration: underline;
+        display: flex;
+    }
+.koleczka {
+    float: left;
+    display: block;
+    height: 25px;
+    width: 25px;
+    padding: 6px;
+    color: #5f6368;
+    opacity: 1;
+    fill: currentColor;
+    white-space: nowrap;
+    display: flex;
+    margin: -6px 8px 0 12px;
+}
+    .koleczka:hover {
+        background-color: #e7e8ea;
+        border-radius:50%;
+    }
+
+.zaloguj {
+    color: #fff;
+    background: #1a73e8;
+    border: 1px solid transparent;
+    font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: .25px;
+    line-height: 16px;
+    margin-right: 8px;
+    min-width: 96px;
+    padding: 9px 23px;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+    .zaloguj:hover {
+        background-color: #4285f4;
+    }
+.logo {
+    min-height: 92px;
+    max-height: 290px;
+    height: calc(100% - 560px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-obrazek {
+    height: 100%;
+    margin-top: auto;
+    max-height: 92px;
+    max-width: 100%;
+    object-fit: contain;
+    object-position: center bottom;
+    width: auto;
+    margin-bottom:20px
+}
+#inputbox {
+
+}
+#input {
+    background: #fff;
+    display: flex;
+    border: 1px solid #dfe1e5;
+    box-shadow: none;
+    border-radius: 24px;
+    z-index: 3;
+    height: 44px;
+    margin: 0 auto;
+    width: auto;
+    max-width: 584px;
+
+}
+#lupa {
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+    margin-left:15px;
+
+}
+#input1 {
+    display: flex;
+    align-items: center;
+    padding-right: 13px;
+    margin-top: -5px;
+    width: 100%;
+    height: 100%;
+}
+#in {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    color: rgba(0,0,0,.87);
+    word-wrap: break-word;
+    outline: none;
+    display: flex;
+    flex: 100%;
+    -webkit-tap-highlight-color: transparent;
+    margin-top: 10px;
+    margin-left: 10px;
+    height: 34px;
+    font-size: 16px;
+    width: 100%;
+    height: 100%;
+   
+}
+#przyciski {
+    height: 70px;
+    padding-top: 18px;
+    top: 53px;
+    z-index: 0;
+    display: block;
+    text-align: center;
+}
+.szukaj {
+    display: inline-block;
+    background-color: #f8f9fa;
+    border: 1px solid #f8f9fa;
+    border-radius: 4px;
+    color: #3c4043;
+    font-family: arial,sans-serif;
+    font-size: 14px;
+    margin: 11px 4px;
+    padding: 0 16px;
+    line-height: 35px;
+    height: 36px;
+    min-width: 54px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+}
+    .szukaj:hover {
+        border: solid 1px #d6d7da;
+    }
+
+.stopka {
+    margin-top: auto;
+    background: #f2f2f2;
+    line-height: 17px;
+}
+
+.stopka-belka {
+    padding: 15px 30px;
+    border-bottom: 1px solid #dadce0;
+    font-size: 15px;
+    color: rgba(0,0,0,.54);
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.stopka-belka-2 {
+    padding: 15px 20px;
+    line-height: 16px;
+    border-bottom: 1px solid transparent;
+}
+
+.stopka ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+    .stopka ul li {
+        padding: 0 14px;
+    }
+
+.stopka a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #70757a;
+}
+
+.stopka-listek {
+    display: flex;
+    align-items: center;
+}
+
+    .stopka-listek img {
+        height: 14px;
+        margin-right: 8px;
+    }
+
+.stopka-lmenu {
+    display: flex;
+    justify-content: flex-start;
+    min-width: 30%;
+}
+
+.stopka-rmenu {
+    min-width: 30%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+@media only screen and (max-width: 1100px) {
+    .stopka-belka-2 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .stopka-listek {
+        margin: 20px 0;
+    }
+}
