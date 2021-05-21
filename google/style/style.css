@@ -10,6 +10,9 @@ body {
     flex-direction: column;
     height: 100%;
 }
+#wrap{
+    height:100%;
+}
 a {
     text-decoration:none;
 }
@@ -178,6 +181,9 @@ a {
     margin-top: auto;
     background: #f2f2f2;
     line-height: 17px;
+    bottom: 0;
+    position: absolute;
+    width:100%;
 }
 
 .stopka-belka {
