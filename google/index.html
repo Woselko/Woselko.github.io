@@ -10,6 +10,11 @@
     <title>Google</title>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+    <script src="cities.js"></script>
+
+    <!--<script type="text/javascript">
+        window.cities = require('./cities');
+    </script>-->
 </head>
 <body>
     <div id="wrap">
@@ -42,13 +47,16 @@
                     <div id="input">
                         <div id="input1">
                             <img id="lupa" src="img/lupa.png" height="16" width="16" />
-                            <input type="text" id="in" v-model="googleSearch" placeholder="Wpisz co Cię interesuje i wciśnij Szukaj w Google"/>
+                            <input type="text" id="in" v-model="googleSearch" placeholder="Wpisz co Cię interesuje i wciśnij Szukaj w Google" />
                             <img id="lupa" src="img/klaw.png" height="12" width="20" />
                             <img id="lupa" src="img/mikro.png" height="20" width="14" />
                         </div>
                         <div>
                         </div>
 
+                    </div>
+                    <div v-if="search" v-for="city in filteredCities.slice(0,10)" :key="city.name">
+                        {{city.name}}
                     </div>
                 </div>
                 <div id="przyciski">
@@ -398,8 +406,37 @@
             data: {
                 main: true,
                 res: false,
+                search: false,
                 googleSearch: "",
+                cities: window.cities,
             },
+            //mounted() {
+            //    window.addEventListener("keypress", e => {
+            //        console.log(String.fromCharCode(e.keyCode));
+            //        /*this.googleSearch += String.fromCharCode(e.keyCode).toString();*/
+            //        if (this.googleSearch != '')
+            //            this.search = true;
+            //    });
+            //},
+            mounted() {
+                window.addEventListener("keypress", function (e) {
+                    char = e.toString();
+                    this.googleSearch = this.googleSearch;
+                    if (this.googleSearch != '')
+                        this.search = true;
+                    if (this.googleSearch == '') {
+                        this.search = false;
+                    }
+                }.bind(this));
+            },
+            computed: {
+                filteredCities() {
+                    return this.cities.filter((city) => {
+                        return city.name.toLowerCase().includes(this.googleSearch.toLowerCase().toString())
+                    })
+                }
+            },
+
             methods: {
                 greet: function (event) {
                     if (this.googleSearch != '') {
@@ -408,15 +445,30 @@
                     }
                     else {
                         alert('Too short input')
-                    }
+                    };
 
                 }
-                  
-                       
-                        
-                
+
             }
-        })
+
+        });
     </script>
+    <!--<script>
+        var app2 = new Vue({
+            el: "#main",
+            data: {
+                googleSearch: "",
+                cities: window.cities
+            },
+            computed: {
+                filteredCities() {
+                    return this.cities.filter((city) => {
+                        return city.name.toLowerCase().includes(this.googleSearch.toString())
+                    })
+                }
+            }
+        });
+
+    </script>-->
 </body>
 </html>
