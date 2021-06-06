@@ -11,10 +11,12 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
     <script src="cities.js"></script>
+    <script src="countries.js"></script>
+    <script src="auto.js"></script>
 
-    <!--<script type="text/javascript">
+    <script type="text/javascript">
         window.cities = require('./cities');
-    </script>-->
+    </script>
 </head>
 <body>
     <div id="wrap">
@@ -41,29 +43,39 @@
 
                     <img class="logo-obrazek" alt="Google" height="92" src="img/google.png" srcset="img/google1.png 1x, img/google.png 2x" width="272" data-iml="1617810314267" data-atf="1">
                 </div>
-
-
-                <div id="inputbox">
-                    <div id="input">
-                        <div id="input1">
-                            <img id="lupa" src="img/lupa.png" height="16" width="16" />
-                            <input type="text" id="in" v-model="googleSearch" placeholder="Wpisz co Cię interesuje i wciśnij Szukaj w Google" />
-                            <img id="lupa" src="img/klaw.png" height="12" width="20" />
-                            <img id="lupa" src="img/mikro.png" height="20" width="14" />
+                <div id="center">
+                    <form autocomplete="off" action="/action_page.php">
+                        <div class="autocomplete" style="width:500px;">
+                            <input id="myInput" type="text" name="myCountry" placeholder="Wpisz co Cię interesuje i wciśnij Szukaj w Google" v-model="googleSearch">
                         </div>
-                        <div>
-                        </div>
-
-                    </div>
-                    <div v-if="search" v-for="city in filteredCities.slice(0,10)" :key="city.name">
-                        {{city.name}}
-                    </div>
+                    </form>
                 </div>
+
+                <!--<div id="inputbox">
+                <div id="input">
+                    <div id="input1">
+                        <img id="lupa" src="img/lupa.png" height="16" width="16" />
+                        <input type="text" id="in" v-model="googleSearch" placeholder="Wpisz co Cię interesuje i wciśnij Szukaj w Google" />
+                        <img id="lupa" src="img/klaw.png" height="12" width="20" />
+                        <img id="lupa" src="img/mikro.png" height="20" width="14" />
+                    </div>
+                    <div>
+                    </div>
+
+                </div>-->
+                <!--<div v-if="search" v-for="city in filteredCities.slice(0,10)" :key="city.name">
+                    {{city.name}}
+                </div>-->
+                <!--</div>-->
                 <div id="przyciski">
 
                     <button v-on:click="greet" class="szukaj">
                         Szukaj w Google
+
+
                     </button>
+
+
                     <!--<div v-on:click="main = false; res = true;" class="szukaj">
                         Szukaj w Google
                     </div>-->
@@ -399,7 +411,6 @@
         </div>
     </div>
 
-
     <script>
         var app1 = new Vue({
             el: '#wrap',
@@ -418,24 +429,24 @@
             //            this.search = true;
             //    });
             //},
-            mounted() {
-                window.addEventListener("keypress", function (e) {
-                    char = e.toString();
-                    this.googleSearch = this.googleSearch;
-                    if (this.googleSearch != '')
-                        this.search = true;
-                    if (this.googleSearch == '') {
-                        this.search = false;
-                    }
-                }.bind(this));
-            },
-            computed: {
-                filteredCities() {
-                    return this.cities.filter((city) => {
-                        return city.name.toLowerCase().includes(this.googleSearch.toLowerCase().toString())
-                    })
-                }
-            },
+            //mounted() {
+            //    window.addEventListener("keypress", function (e) {
+            //        char = e.toString();
+            //        this.googleSearch = this.googleSearch;
+            //        if (this.googleSearch != '')
+            //            this.search = true;
+            //        if (this.googleSearch == '') {
+            //            this.search = false;
+            //        }
+            //    }.bind(this));
+            //},
+            //computed: {
+            //    filteredCities() {
+            //        return this.cities.filter((city) => {
+            //            return city.name.toLowerCase().includes(this.googleSearch.toLowerCase().toString())
+            //        })
+            //    }
+            //},
 
             methods: {
                 greet: function (event) {
@@ -453,22 +464,9 @@
 
         });
     </script>
-    <!--<script>
-        var app2 = new Vue({
-            el: "#main",
-            data: {
-                googleSearch: "",
-                cities: window.cities
-            },
-            computed: {
-                filteredCities() {
-                    return this.cities.filter((city) => {
-                        return city.name.toLowerCase().includes(this.googleSearch.toString())
-                    })
-                }
-            }
-        });
-
-    </script>-->
+    <script>
+        var countries = ["Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Anguilla", "Antigua &amp; Barbuda", "Argentina", "Armenia", "Aruba", "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bermuda", "Bhutan", "Bolivia", "Bosnia &amp; Herzegovina", "Botswana", "Brazil", "British Virgin Islands", "Brunei", "Bulgaria", "Burkina Faso", "Burundi", "Cambodia", "Cameroon", "Canada", "Cape Verde", "Cayman Islands", "Central Arfrican Republic", "Chad", "Chile", "China", "Colombia", "Congo", "Cook Islands", "Costa Rica", "Cote D Ivoire", "Croatia", "Cuba", "Curacao", "Cyprus", "Czech Republic", "Denmark", "Djibouti", "Dominica", "Dominican Republic", "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea", "Estonia", "Ethiopia", "Falkland Islands", "Faroe Islands", "Fiji", "Finland", "France", "French Polynesia", "French West Indies", "Gabon", "Gambia", "Georgia", "Germany", "Ghana", "Gibraltar", "Greece", "Greenland", "Grenada", "Guam", "Guatemala", "Guernsey", "Guinea", "Guinea Bissau", "Guyana", "Haiti", "Honduras", "Hong Kong", "Hungary", "Iceland", "India", "Indonesia", "Iran", "Iraq", "Ireland", "Isle of Man", "Israel", "Italy", "Jamaica", "Japan", "Jersey", "Jordan", "Kazakhstan", "Kenya", "Kiribati", "Kosovo", "Kuwait", "Kyrgyzstan", "Laos", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg", "Macau", "Macedonia", "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Marshall Islands", "Mauritania", "Mauritius", "Mexico", "Micronesia", "Moldova", "Monaco", "Mongolia", "Montenegro", "Montserrat", "Morocco", "Mozambique", "Myanmar", "Namibia", "Nauro", "Nepal", "Netherlands", "Netherlands Antilles", "New Caledonia", "New Zealand", "Nicaragua", "Niger", "Nigeria", "North Korea", "Norway", "Oman", "Pakistan", "Palau", "Palestine", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", "Poland", "Portugal", "Puerto Rico", "Qatar", "Reunion", "Romania", "Russia", "Rwanda", "Saint Pierre &amp; Miquelon", "Samoa", "San Marino", "Sao Tome and Principe", "Saudi Arabia", "Senegal", "Serbia", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia", "Solomon Islands", "Somalia", "South Africa", "South Korea", "South Sudan", "Spain", "Sri Lanka", "St Kitts &amp; Nevis", "St Lucia", "St Vincent", "Sudan", "Suriname", "Swaziland", "Sweden", "Switzerland", "Syria", "Taiwan", "Tajikistan", "Tanzania", "Thailand", "Timor L'Este", "Togo", "Tonga", "Trinidad &amp; Tobago", "Tunisia", "Turkey", "Turkmenistan", "Turks &amp; Caicos", "Tuvalu", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "United States of America", "Uruguay", "Uzbekistan", "Vanuatu", "Vatican City", "Venezuela", "Vietnam", "Virgin Islands (US)", "Yemen", "Zambia", "Zimbabwe"];
+        autocomplete(document.getElementById("myInput"), countries);
+    </script>
 </body>
 </html>
