@@ -1,0 +1,332 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="rozwijane menu CSS" />
+    <meta name="keywords" content="menu, css, html" />
+
+    <title>Pieprzmięty</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="css/fontello.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/lightpick@latest/css/lightpick.css">
+    <link rel="stylesheet" href="/css/styleswiper.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/site.css" />
+</head>
+<body>
+
+    <div class="wrapper">
+        <div class="header">
+            <div class="logo">
+                <img src="img/mint.png" style="float:left;" width="150" height="105" />
+                pepper<span style="color:#128870 ;">minty</span>
+                <div style="clear:both;"></div>
+            </div>
+        </div>
+        <div class="nav">
+            <ol>
+                <li><a href="#">Strona główna</a></li>
+                <li>
+                    <a href="#">Klasyki</a>
+                    <ul>
+                        <li><a href="#">Mięta pieprzowa</a></li>
+                        <li><a href="#">Mięta wonna</a></li>
+                        <li><a href="#">Mięta nadwodna</a></li>
+                        <li><a href="#">Mięta polna</a></li>
+                    </ul>
+
+                </li>
+                <li>
+                    <a href="#">Odmiany</a>
+                    <ul>
+                        <li><a href="#">Mięta cytrynowa</a></li>
+                        <li><a href="#">Mięta korsykańska </a></li>
+                        <li><a href="#">Mięta karyncka</a></li>
+                        <li><a href="#">Mięta kędzierzawa</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Wlasciwosci</a>
+                    <ul>
+                        <li><a href="#">przyklad1</a></li>
+                        <li><a href="#">przyklad2</a></li>
+                        <li><a href="#">przyklad3</a></li>
+                        <li><a href="#">przyklad4</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Mapa strony</a>
+                    <ul>
+                        <li><a href="#">przyklad1</a></li>
+                        <li><a href="#">przyklad2</a></li>
+                        <li><a href="#">przyklad3</a></li>
+                        <li><a href="#">przyklad4</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Autorzy</a></li>
+            </ol>
+        </div>
+        <div class="content">
+            <div>
+                <div class="swiper-container">
+                    <div style="color: white;font-size: 150px;" class="swiper-button-next"></div>
+                    <div style="color: white;font-size: 150px;" class="swiper-button-prev"></div>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide slide1" style="background-image: url(../CAD/img/mint1.jpeg)" ;>
+                            <h1> Lovely Flowers </h1>
+                            <p style="color: white;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, harum.</p>
+                            <div class="booking">
+                                <button style=" width: 500%; height: 1500%; font-size: 16px; margin-left: 50%; background-color: #f0780d; border-color: #f0780d; color: white;"
+                                        type="button" class="btn btn-info" onClick="document.getElementById('middle').scrollIntoView();">
+                                    Wypełnij formularz i zamów już dziś!
+                                </button>
+
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide slide2" style="background-image: url(../CAD/img/mint2.jpg)">
+                            <h1> Beautiful Plants </h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, harum.</p>
+                            <div class="booking">
+                                <button style=" width: 500%; height: 1500%; font-size: 16px; margin-left: 50%; background-color: #f0780d; border-color: #f0780d; color: white;"
+                                        type="button" class="btn btn-info" onClick="document.getElementById('media').scrollIntoView();">
+                                    Sprawdź nas w mediach społecznościowych
+                                </button>
+
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide slide3" style="background-image: url(../CAD/img/mint3.jpg)">
+                            <h1> Great Mountains </h1>
+                            <p style="color: white;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, harum.</p>
+                            <div class="booking">
+                                <button style=" width: 500%; height: 1500%; font-size: 16px; margin-left: 50%; background-color: #f0780d; border-color: #f0780d; color: white;"
+                                        type="button" class="btn btn-info" onClick="document.getElementById('middle').scrollIntoView();">
+                                    Więcej szczegółów!
+                                </button>
+
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide slide4" style="background-image: url(../CAD/img/mint4.jpg)">
+                            <h1> Bla bla bla Bla  </h1>
+                            <p style="color: white;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, harum.</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="swiper-pagination"></div>
+
+                </div>
+
+                <br />
+                <br />
+                <p id="middle">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, ex a efficitur interdum,
+                    magna arcu auctor metus, semper viverra nulla tellus non nulla. Quisque porttitor commodo venenatis.
+                    Nunc consequat est tincidunt, volutpat dolor nec, volutpat sapien. Etiam at odio ac turpis egestas cursus.
+                    Nulla suscipit nisl accumsan orci aliquet, in egestas nisl tincidunt. Sed consequat enim ac felis bibendum,
+                    et iaculis dui ultrices. Curabitur feugiat tempus odio consectetur laoreet. Nunc quis erat tempus purus
+                    pretium bibendum quis in purus. Etiam nibh leo, pretium quis pretium at, iaculis sed arcu. In vulputate
+                    vitae elit suscipit pellentesque. Mauris dui metus, lacinia eu lobortis et, dapibus at neque.
+                    Donec ac eleifend urna. Nam consequat arcu nec est vehicula, ut rutrum sapien maximus. Etiam rutrum facilisis elit,
+                    ac feugiat nunc iaculis quis. Praesent vel sollicitudin sapien.
+                </p>
+
+                <form style="text-align:unset">
+
+                    <label for="fname">Imię</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Wpisz imię">
+
+                    <label for="lname">E-Mail</label>
+                    <input type="text" id="lname" name="lastname" placeholder="wpisz Email">
+
+                    <label for="country">Kraj</label>
+                    <select id="country" name="country">
+                        <option value="usa">Polska</option>
+                        <option value="usa">Niemcy</option>
+                        <option value="australia">Australia</option>
+                        <option value="canada">Kanada</option>
+                        <option value="usa">USA</option>
+                    </select>
+
+                    <label for="subject">Temat</label>
+                    <textarea id="subject" name="subject" placeholder="Treść zamówienia" style="height:200px"></textarea>
+                    <a href="#"><input type="submit" value="Wyślij"></a>
+                    <!--<input type="submit" value="Wyślij">-->
+
+                </form>
+                <p>
+                    Donec sed risus rutrum, suscipit mauris sit amet, iaculis mauris. Aenean posuere accumsan orci molestie pretium.
+                    Nulla varius egestas velit, lobortis eleifend lectus posuere at. Nam imperdiet et ligula vehicula placerat.
+                    Etiam tincidunt velit non tellus tempus elementum. Cras non magna risus. Fusce porttitor leo sed arcu lacinia fringilla.
+                    Sed porttitor odio eget nulla efficitur rhoncus. Curabitur molestie sagittis ex in rutrum. Sed laoreet mauris ac enim tincidunt elementum.
+                </p>
+
+                <p>
+                    Praesent sed sem vitae arcu suscipit posuere id sed urna. Vestibulum efficitur posuere felis at mollis.
+                    Mauris vitae dignissim dui. Fusce in tempus ex, quis pretium urna. Aenean volutpat faucibus dolor, et dictum magna aliquam ac.
+                    Vestibulum non sollicitudin justo, in semper dui. Donec augue lorem, consectetur vel mattis vel, sagittis non nibh.
+                </p>
+                <div style="margin-left: auto; margin-right: auto; display: table; ">
+                    <iframe width="600" height="400"
+                            src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                    </iframe>
+                </div>
+
+                <p>
+                    Sed pretium quis dolor ut placerat. Suspendisse nec pretium felis. Integer at libero hendrerit, molestie lectus sit amet, accumsan augue.
+                    Vivamus malesuada neque sit amet nisi consectetur, sed rutrum ante gravida. Maecenas sit amet volutpat quam, at mattis nisi. Vestibulum ante
+                    ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Phasellus nec nisi tincidunt, tempor mi at, tristique orci.
+                    Curabitur tincidunt sapien ut ex hendrerit, sed accumsan neque consequat. Pellentesque et aliquet mauris. Morbi sapien massa, tempus eu urna quis,
+                    venenatis facilisis ipsum. Quisque ut arcu sit amet nisl ultrices auctor. Nullam pulvinar gravida justo, ultricies rhoncus quam sodales facilisis.
+                </p>
+
+                <p>
+                    In nisl sapien, tincidunt et consequat a, fermentum non urna. Sed volutpat nisl id erat tempor posuere. Quisque ac tempor est.
+                    Morbi tincidunt euismod ex, et viverra ipsum condimentum id. Aliquam eget pretium odio. Duis ut lectus pharetra, facilisis ante id, pretium sapien.
+                    Aliquam varius dignissim suscipit. Integer non ultricies tortor. Curabitur ut posuere ex, quis mattis ex. In sit amet dolor nisi.
+                    Maecenas sed tortor et erat imperdiet convallis vitae eget quam. Vestibulum vel justo congue, tempor quam non, elementum libero.
+                    Quisque condimentum nunc sed erat vulputate, dictum sodales nibh rutrum. Morbi vitae arcu tincidunt, tristique tortor eget, lobortis leo.
+                    Curabitur ac dolor tempus, laoreet diam ac, ultrices nisl.
+                </p>
+                <div style="margin-left: auto; margin-right: auto; display: table; background-image: url(../CAD/img/grzyb1.jpg); height: 500px; width: 70%;">
+
+                </div>
+                <p>
+                    Sed pretium quis dolor ut placerat. Suspendisse nec pretium felis. Integer at libero hendrerit, molestie lectus sit amet, accumsan augue.
+                    Vivamus malesuada neque sit amet nisi consectetur, sed rutrum ante gravida. Maecenas sit amet volutpat quam, at mattis nisi. Vestibulum ante
+                    ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Phasellus nec nisi tincidunt, tempor mi at, tristique orci.
+                    Curabitur tincidunt sapien ut ex hendrerit, sed accumsan neque consequat. Pellentesque et aliquet mauris. Morbi sapien massa, tempus eu urna quis,
+                    venenatis facilisis ipsum. Quisque ut arcu sit amet nisl ultrices auctor. Nullam pulvinar gravida justo, ultricies rhoncus quam sodales facilisis.
+                </p>
+
+                <p>
+                    In nisl sapien, tincidunt et consequat a, fermentum non urna. Sed volutpat nisl id erat tempor posuere. Quisque ac tempor est.
+                    Morbi tincidunt euismod ex, et viverra ipsum condimentum id. Aliquam eget pretium odio. Duis ut lectus pharetra, facilisis ante id, pretium sapien.
+                    Aliquam varius dignissim suscipit. Integer non ultricies tortor. Curabitur ut posuere ex, quis mattis ex. In sit amet dolor nisi.
+                    Maecenas sed tortor et erat imperdiet convallis vitae eget quam. Vestibulum vel justo congue, tempor quam non, elementum libero.
+                    Quisque condimentum nunc sed erat vulputate, dictum sodales nibh rutrum. Morbi vitae arcu tincidunt, tristique tortor eget, lobortis leo.
+                    Curabitur ac dolor tempus, laoreet diam ac, ultrices nisl.
+                </p>
+                <div style="margin-left: auto; margin-right: auto; display: table; background-image: url(../CAD/img/grzyb2.jpg); height: 500px; width: 70%;">
+
+                </div>
+                <p>
+                    Sed pretium quis dolor ut placerat. Suspendisse nec pretium felis. Integer at libero hendrerit, molestie lectus sit amet, accumsan augue.
+                    Vivamus malesuada neque sit amet nisi consectetur, sed rutrum ante gravida. Maecenas sit amet volutpat quam, at mattis nisi. Vestibulum ante
+                    ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Phasellus nec nisi tincidunt, tempor mi at, tristique orci.
+                    Curabitur tincidunt sapien ut ex hendrerit, sed accumsan neque consequat. Pellentesque et aliquet mauris. Morbi sapien massa, tempus eu urna quis,
+                    venenatis facilisis ipsum. Quisque ut arcu sit amet nisl ultrices auctor. Nullam pulvinar gravida justo, ultricies rhoncus quam sodales facilisis.
+                </p>
+
+                <p>
+                    In nisl sapien, tincidunt et consequat a, fermentum non urna. Sed volutpat nisl id erat tempor posuere. Quisque ac tempor est.
+                    Morbi tincidunt euismod ex, et viverra ipsum condimentum id. Aliquam eget pretium odio. Duis ut lectus pharetra, facilisis ante id, pretium sapien.
+                    Aliquam varius dignissim suscipit. Integer non ultricies tortor. Curabitur ut posuere ex, quis mattis ex. In sit amet dolor nisi.
+                    Maecenas sed tortor et erat imperdiet convallis vitae eget quam. Vestibulum vel justo congue, tempor quam non, elementum libero.
+                    Quisque condimentum nunc sed erat vulputate, dictum sodales nibh rutrum. Morbi vitae arcu tincidunt, tristique tortor eget, lobortis leo.
+                    Curabitur ac dolor tempus, laoreet diam ac, ultrices nisl.
+                </p>
+            </div>
+            <h2 id="media">Sprawdź nas w mediach społecznościowych:</h2>
+            <div class="socials">
+                <div class="socialdivs">
+                    <div class="fb">
+                        <a href="https://www.facebook.com/pracowniaczujemiete" class="sociallink" target="_blank"> <i class="icon-facebook-squared"></i></a>
+                    </div>
+                    <div class="yt">
+                        <a href="https://www.youtube.com/" class="sociallink" target="_blank"><i class="icon-youtube-squared"></i></a>
+                    </div>
+                    <div class="tw">
+                        <a href="https://twitter.com/" class="sociallink" target="_blank"> <i class="icon-twitter-squared"></i></a>
+                    </div>
+                    <div class="git">
+                        <a href="https://github.com/Woselko" class="sociallink" target="_blank"> <i class="icon-github-circled"></i></a>
+                    </div>
+                    <div style="clear:both;">
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer">
+            Pepperminty &copy; 2021 Thank you for your visit Mario ! ;-)
+        </div>
+
+
+        <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+        <script type="text/javascript" src="https://unpkg.com/lightpick@latest/lightpick.js"></script>
+        <script type="text/javascript" src="demo.js"></script>
+        <!--  como é um projeto pequeno, eu estou utilizando a api por este link, sem precisar baixar algum arquivo. Caso for utilizar esse efeito em projetos grandes, é recomendado
+    baixar os arquivos da biblioteca -->
+        <script src="jquerry.js"></script>
+        <script>
+            $(document).ready(function () {
+                var NavY = $('.nav').offset().top;
+
+                var stickyNav = function () {
+                    var ScrollY = $(window).scrollTop();
+
+                    if (ScrollY > NavY) {
+                        $('.nav').addClass('sticky');
+                    } else {
+                        $('.nav').removeClass('sticky');
+                    }
+                };
+
+                stickyNav();
+
+                $(window).scroll(function () {
+                    stickyNav();
+                });
+            });
+        </script>
+
+        <script>
+            var swiper = new Swiper('.swiper-container', {
+                effect: 'cube',
+                grabCursor: true,
+                cubeEffect: {
+                    shadow: true,
+                    slideShadows: true,
+                    shadowOffset: 20,
+                    shadowScale: 0.94,
+                },
+
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                }
+            })
+        </script>
+        <script>
+            var picker = new Lightpick({
+                field: document.getElementById('demo-3_1'),
+                secondField: document.getElementById('demo-3_2'),
+                repick: true,
+                startDate: moment().startOf('month').add(7, 'day'),
+                endDate: moment().add(1, 'month').endOf('month').subtract(7, 'day'),
+                onSelect: function (start, end) {
+                    var str = '';
+                    str += start ? start.format('Do MMMM YYYY') + ' to ' : '';
+                    str += end ? end.format('Do MMMM YYYY') : '...';
+                    document.getElementById('result-11').innerHTML = str;
+                }
+            });
+        </script>
+
+</body>
+</html>
